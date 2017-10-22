@@ -48,7 +48,7 @@ try:
     tweet_reply = []
     tweet = get_random_tweet("perceptronium")
     reply = get_random_reply(JOINT_REPLIES + PERCEPTRONIUM_REPLIES)
-    if tweet:
+    if tweet and (tweet.user.screen_name != "perceptronium"):
         tweet_reply.append([tweet, reply])
     tweet = get_random_tweet("max tegmark")
     reply = get_random_reply(JOINT_REPLIES + TEGMARK_REPLIES)
